@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('Rice_Pest_Data_Input')">
+                        {{ __('Rice Pest Data Input') }}
+                    </x-nav-link>
                 </div>
             </div>
 

@@ -21,6 +21,10 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+    public function commonData()
+    {
+        return $this->hasMany(CommonData::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
