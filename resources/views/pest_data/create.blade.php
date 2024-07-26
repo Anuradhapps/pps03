@@ -35,11 +35,11 @@
                         @foreach(['tillers', 'thrips', 'gall_midge', 'leaffolder', 'yellow_stem_borer', 'bph_wbph_borer', 'paddy_bug'] as $pestType)
                             <div class="mb-4">
                                 <label class="block text-sm font-medium text-gray-700">{{ ucfirst(str_replace('_', ' ', $pestType)) }}</label>
-                                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                                <div class="flex gap-2">
                                     @for($i = 1; $i <= 10; $i++)
                                         <div class="flex flex-col items-center">
                                             <label for="{{ $pestType }}_in_location_0{{ $i }}" class="sr-only">{{ ucfirst(str_replace('_', ' ', $pestType)) }} in Location 0{{ $i }}</label>
-                                            <input type="text" name="{{ $pestType }}_in_location_0{{ $i }}" id="{{ $pestType }}_in_location_0{{ $i }}" placeholder="Loc {{ $i }}" class="block w-full border-gray-300 rounded-md shadow-sm">
+                                            <input type="text" name="{{ $pestType }}_in_location_0{{ $i }}" id="{{ $pestType }}_in_location_0{{ $i }}" placeholder="L{{ $i }}" class="block w-full border-gray-300 rounded-md shadow-sm">
                                         </div>
                                     @endfor
                                 </div>
